@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume - Carlos Miguel Martinez Machado</title>
+  <style>
+    :root {
+      --primary-color: #1e293b;
+      --accent-color: #2563eb;
+      --text-dark: #334155;
+      --text-muted: #64748b;
+      --border-color: #8c9db4;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text-dark);
+      background-color: #738597;
+      line-height: 1.5;
+      padding: 20px;
+    }
+
+    .resume-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: var(--primary-color);
+      color: #ffffff;
+      padding: 35px 40px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+    }
+
+    header h2 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #93c5fd;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .contact-bar {
+      background-color: #0f172a;
+      color: #cbd5e1;
+      padding: 12px 40px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 0.9rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .contact-item a {
+      color: #cbd5e1;
+      text-decoration: none;
+    }
+
+    .contact-item a:hover {
+      color: #ffffff;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 30px;
+      padding: 30px 40px;
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      color: var(--primary-color);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+
+    .job-item {
+      margin-bottom: 22px;
+      position: relative;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 4px;
+    }
+
+    .job-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      text-transform: uppercase;
+    }
+
+    .job-date {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent-color);
+      background-color: #eff6ff;
+      padding: 2px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    .job-company {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .job-bullet {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .job-bullet li {
+      font-size: 0.9rem;
+      position: relative;
+      padding-left: 15px;
+      margin-bottom: 4px;
+    }
+
+    .job-bullet li::before {
+      content: "•";
+      color: var(--accent-color);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .education {
+      font-size: 0.95rem;
+      color: var(--primary-color);
+      font-weight: 700;
+    }
+
+    .education .institution {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .education .year {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent-color);
+    }
+
+    /* Skills List */
+    .skills-list {
+      list-style: none;
+    }
+
+    .skills-list li {
+      font-size: 0.9rem;
+      padding: 6px 0;
+      border-bottom: 1px dashed var(--border-color);
+      display: flex;
+      align-items: center;
+    }
+
+    .skills-list li::before {
+      content: "✓";
+      color: var(--accent-color);
+      margin-right: 8px;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .content-grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+      }
+
+      header {
+        padding: 25px 20px;
+      }
+
+      .contact-bar {
+        padding: 12px 20px;
+        flex-direction: column;
+        gap: 8px;
+      }}
+  </style>
+</head>
+<body>
+
+  <div class="resume-container">
+    <!-- Header -->
+    <header>
+      <h1>Carlos Miguel Martinez Machado.</h1>
+      <h2>Customer Service Agent / Manager</h2>
+    </header>
+
+    <div class="contact-bar">
+      <div class="contact-item">
+        La Estrella, Antioquia
+      </div>
+      <div class="contact-item">
+        <a href="mailto:carlosmiguelmartinez257@gmail.com">carlosmiguelmartinez257@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <a href="tel:+573171511606">+57 3171511606</a>
+      </div>
+    </div>
+
+    <div class="content-grid">
+      
+      <main class="main-content">
+        <h3 class="section-title">Work Experience</h3>
+
+        <div>
+          <div class="job-header">
+            <p class="job-title">Team Leader</p>
+            <p class="job-date">MAY 2025 - JUL 2026</p>
+          </div>
+          <div class="job-company">TaskUs — Medellin, Antioquia</div>
+          <ul class="job-bullet">
+            <li>Content Moderation</li>
+            <li>Specialized in work optimization</li>
+            <li>First team lead winner of the higher scores awards</li>
+            <li>Soft-skills & Excellent communication</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="job-header">
+            <p class="job-title">Senior Customer Care Specialist</p>
+            <p class="job-date">FEB 2024 - MAY 2025</p>
+          </div>
+          <div class="job-company">TaskUs — Medellin, Antioquia</div>
+          <ul class="job-bullet">
+            <li>Order taker</li>
+            <li>Ticket booking</li>
+            <li>Sales and payment assistance</li>
+            <li>Troubleshooting</li>
+            <li>Floor support</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="job-header">
+            <p class="job-title">Customer Service Agent</p>
+            <p class="job-date">DEC 2023 - FEB 2024</p>
+          </div>
+          <div class="job-company">Teleperformance — Medellin, Antioquia</div>
+          <ul class="job-bullet">
+            <li>Customer Service</li>
+            <li>Contribution on security installation systems</li>
+            <li>Sales of high tech devices and subscriptions</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="job-header">
+            <p class="job-title">Customer Service</p>
+            <p class="job-date">OCT 2023 - DEC 2023</p>
+          </div>
+          <div class="job-company">Amazon — Medellín, Antioquia</div>
+          <ul class="job-bullet">
+            <li>Customer Service</li>
+            <li>Check orders & confirm payments</li>
+            <li>Problem solving</li>
+          </ul>
+        </div>
+
+        <div class="job-item">
+          <div class="job-header">
+            <p class="job-title">Customer Care Specialist</p>
+            <p class="job-date">OCT 2022 - AUG 2023</p>
+          </div>
+          <div class="job-company">SOLVOGLOBAL — Medellin, Antioquia</div>
+          <ul class="job-bullet">
+            <li>Customer Service</li>
+            <li>Roadside assistance</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="job-header">
+            <p class="job-title">Customer Service Agent</p>
+            <p class="job-date">MAR 2022 - SEP 2022</p>
+          </div>
+          <div class="job-company">FLAProPainting — Medellin, Antioquia</div>
+          <ul class="job-bullet">
+            <li>Customer Service</li>
+            <li>Appointment setter</li>
+            <li>Translator</li>
+            <li>Logistic management</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="job-header">
+            <p class="job-title">Customer Service Agent / Manager</p>
+            <p class="job-date">JAN 2016 - FEB 2022</p>
+          </div>
+          <div class="job-company">Conexion C.A — Cabimas, Venezuela</div>
+          <ul class="job-bullet">
+            <li>Customer Service</li>
+            <li>Typing and document creation</li>
+            <li>General management</li>
+            <li>Sales of electronic devices</li>
+          </ul>
+        </div>
+      </main>
+
+      <aside>
+        <div>
+          <p class="section-title">Education</p>
+          <div class="education">
+            <p>HIGH SCHOOL DIPLOMA</p>
+            <div class="institution">Unidad Educativa Cristobal Velasquez II, Cabimas, Venezuela 2017</div>
+          </div>
+        </div>
+
+        <div>
+          <p class="section-title">Skills</p>
+          <ul class="skills-list">
+            <li>Work Ethic</li>
+            <li>Positive Attitude</li>
+            <li>Leadership</li>
+            <li>Empathy</li>
+            <li>Communication Skills</li>
+            <li>Multitasking Abilities</li>
+            <li>Troubleshooting</li>
+            <li>Work Optimization</li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+</body>
+</html>
